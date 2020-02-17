@@ -1,22 +1,15 @@
-﻿@model MyFace.Models.View.PostsViewModel
+﻿@using Microsoft.EntityFrameworkCore.Infrastructure
+@using MyFace.Controllers
+@using MyFace.Models.Database
+@using MyFace.Models.View
+@model MyFace.Models.View.PostsViewModel
 
 @{
     Layout = "_Layout";
+    
 }
 
-<h1>This is the All Posts Page</h1>
-
-<h2>Create a new post</h2>
-
-<form action="/posts/create" method="post">
-    <label for="userid">User ID:</label><br>
-    <input type="text" id="userid" name="userid"><br>
-    
-    <label for="message">Message:</label><br>
-    <input type="text" id="message" name="message"><br>
-    
-    <label for="imageurl">Image URL:</label><br>
-    <input type="url" id="imageurl" name="imageurl"><br>
-    
-    <input type="submit" value="Submit">
-</form>
+@foreach (var post in Model.Posts)
+{
+    <li>@post.Message</li>
+}
