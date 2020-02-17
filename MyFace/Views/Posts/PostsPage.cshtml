@@ -1,10 +1,23 @@
+
+﻿@using Microsoft.EntityFrameworkCore.Infrastructure
+@using MyFace.Controllers
+@using MyFace.Models.Database
+@using MyFace.Models.View
+=======
 ﻿@using MyFace.Controllers
+
 @model MyFace.Models.View.PostsViewModel
 
 @{
     Layout = "_Layout";
+    
 }
 
+@foreach (var post in Model.Posts)
+{
+    <li>@post.Message</li>
+}
+=======
 <h1>MyFace Posts</h1>
 
 There are currently no posts, have a kitten pic instead: <br>
