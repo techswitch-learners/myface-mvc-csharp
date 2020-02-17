@@ -1,12 +1,29 @@
+
+﻿@using Microsoft.EntityFrameworkCore.Infrastructure
+@using MyFace.Controllers
+@using MyFace.Models.Database
+@using MyFace.Models.View
+=======
 ﻿@using MyFace.Controllers
+
 @model MyFace.Models.View.PostsViewModel
 
 @{
     Layout = "_Layout";
+    
 }
 
+@foreach (var post in Model.Posts)
+{
+    <li>@post.Message</li>
+}
+=======
 <h1>MyFace Posts</h1>
 
 <p>There are currently no posts, have a kitten pic instead </p>
 
+<<<<<<< HEAD
 <img src="https://i.imgur.com/S2XB7Cm.jpg" alt="Two Sleeping Cats" style="width:500px;height:500px;"/>
+=======
+<img src="https://i.imgur.com/S2XB7Cm.jpg" alt="Two Sleeping Cats"/>
+>>>>>>> master
