@@ -20,7 +20,7 @@ namespace MyFace.Controllers
             _interactions = interactions;
         }
         
-        [HttpGet("")]
+        [HttpGet("/postspage")]
         public IActionResult PostsPage()
         {
             var posts = _posts.GetAll();
@@ -28,7 +28,7 @@ namespace MyFace.Controllers
             return View(viewModel);
         }
 
-        [HttpGet("create")]
+        [HttpGet("/createpostpage")]
         public IActionResult CreatePostPage()
         {
             return View();
